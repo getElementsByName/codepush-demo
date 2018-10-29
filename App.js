@@ -16,7 +16,7 @@ class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>CodePush Demo 1.0 v6</Text>
+        <Text style={styles.welcome}>CodePush Demo 1.0 v10</Text>
       </View>
     );
   }
@@ -41,6 +41,9 @@ const styles = StyleSheet.create({
   },
 });
 
-
-const AppWithCodePush = CodePush(App)
+const codePushOptions = { 
+  checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME, 
+  installMode: CodePush.InstallMode.ON_NEXT_RESUME 
+}
+const AppWithCodePush = CodePush(codePushOptions)(App)
 export default AppWithCodePush

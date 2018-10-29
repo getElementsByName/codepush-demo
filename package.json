@@ -9,7 +9,9 @@
     "deploy.set-current.android": "appcenter apps set-current getElementsbyName/codepush-android-demo",
     "deploy.set-current.ios": "appcenter apps set-current getElementsbyName/codepush-ios-demo",
     "deploy.release": "appcenter codepush release-react",
-    "deploy.list": "appcenter codepush deployment list"
+    "deploy.list": "appcenter codepush deployment list",
+    "deploy.history.staging": "appcenter codepush deployment history Staging",
+    "deploy.check-key": "appcenter codepush deployment list --displayKeys"
   },
   "dependencies": {
     "appcenter": "1.9.0",
