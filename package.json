@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "deploy.login": "appcenter login",
+    "deploy.set-current.android": "appcenter apps set-current getElementsbyName/codepush-android-demo",
+    "deploy.set-current.ios": "appcenter apps set-current getElementsbyName/codepush-ios-demo",
+    "deploy.release": "appcenter codepush release-react"
   },
   "dependencies": {
     "appcenter": "1.9.0",
