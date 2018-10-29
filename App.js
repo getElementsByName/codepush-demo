@@ -16,7 +16,7 @@ class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>CodePush Demo 1.0 v5</Text>
+        <Text style={styles.welcome}>CodePush Demo 1.0 v6</Text>
       </View>
     );
   }
