@@ -9,9 +9,12 @@
     "deploy.set-current.android": "appcenter apps set-current getElementsbyName/codepush-android-demo",
     "deploy.set-current.ios": "appcenter apps set-current getElementsbyName/codepush-ios-demo",
     "deploy.release": "appcenter codepush release-react",
+    "deploy.release.version": "appcenter codepush release-react --target-binary-version \"~1.1.0\"",
+    "deploy.release.rollback.Staging": "appcenter codepush rollback Staging",
     "deploy.list": "appcenter codepush deployment list",
     "deploy.history.staging": "appcenter codepush deployment history Staging",
-    "deploy.check-key": "appcenter codepush deployment list --displayKeys"
+    "deploy.check-key": "appcenter codepush deployment list --displayKeys",
+    "deployment.clear.Staging": "appcenter codepush deployment clear Staging"
   },
   "dependencies": {
     "@types/react": "^16.7.2",
