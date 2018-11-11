@@ -9,6 +9,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import CodePush from 'react-native-code-push'
+import { AppVersion } from './AppVersion'
 
 type Props = {};
 
@@ -16,7 +17,19 @@ class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>CodePush Demo 1.0 v10</Text>
+        <Text style={styles.welcome}>CodePush Demo</Text>
+        <AppVersion>
+          {({ buildVersion, jsLabel, version, isLocal }) => {
+            return (
+              <>
+                <Text>BuildVersion: {buildVersion}</Text>
+                <Text>version: {version}</Text>
+                <Text>jsLabel: {jsLabel}</Text>
+                <Text>isLocal: {isLocal ? "LOCAL": "REMOTE"}</Text>
+              </>
+            )
+          }}
+        </AppVersion>
       </View>
     );
   }
