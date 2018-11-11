@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, Image} from 'react-native';
 import CodePush from 'react-native-code-push'
 import { AppVersion } from './AppVersion'
 
@@ -22,6 +22,7 @@ class App extends Component<Props> {
           {({ buildVersion, jsLabel, version, isLocal }) => {
             return (
               <>
+                <Image source={require('./assets/codepush.png')}/>
                 <Text>BuildVersion: {buildVersion}</Text>
                 <Text>version: {version}</Text>
                 <Text>jsLabel: {jsLabel}</Text>
